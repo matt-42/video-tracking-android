@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gui_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="top"
+    android:orientation="vertical" >
+
+    <spy.demo.CameraStream
+        android:id="@+id/cameraStream"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight=".90" 
+        />
+
+  <LinearLayout android:orientation="horizontal" 
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content" 
+      android:layout_weight=".10" >
+
+  <ToggleButton 
+    android:id="@+id/toggleResolution"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textOff="320x240"
+    android:textOn="176x144"
+    android:onClick="changeResolution"/>
+    
+    <Button
+     android:id="@+id/trackingBtn"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="Tracking"
+     android:onClick="selfDestruct"
+     />
+    <Button
+     android:id="@+id/bgsubBtn"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="Bg substraction"
+     android:onClick="selfDestruct"
+     />
+    
+  </LinearLayout>
+
+</LinearLayout>
